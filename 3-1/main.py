@@ -59,11 +59,13 @@ matches = []
 for i in wire1path:
     for j in wire2path:
         if i == j:
+            if i == [0, 0]:
+                break
             print("Got a match!" + str(i))
             matches.append(abs(i[0]) + abs(i[1]))
+            matches.sort()
+            print("Smallest match :" + str(matches[0]))
 
-matches.sort()
-print(matches)
 
 
 
